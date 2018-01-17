@@ -19,19 +19,12 @@ extension Droplet {
         get("info") { req in
             return req.description
         }
-
-        get("fuckyou") { request in
-            print("Attempted to reach /fuckyou")
-            return "hi"
-        }
         
         post("hey") { req in
             
-            var decodedBody = try? req.decodeJSONBody()
+            print("This is the start of the print...")
+            print(dump(req))
             
-            
-            
-//            print(dump(req))
             return "what's good"
         }
         
